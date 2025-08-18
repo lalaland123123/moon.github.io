@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>420/240</title>
+    <style>
+        body, html {
+            height: 100%;
+            margin: 0;
+            overflow: hidden; /* Prevent scrolling if the image overflows */
+        }
+
+        .background-container {
+            background-image: url('smoky-background.jpeg'); /* Replace with your smoky background image URL */
+            background-size: cover; /* Ensure the image covers the entire container */
+            background-position: center; /* Center the background image */
+            background-repeat: no-repeat; /* Prevent the background image from repeating */
+            height: 100%;
+            width: 100%;
+            position: relative; /* Essential for positioning the child image */
+        }
+
+        .centered-image {
+            position: absolute; /* Position the image absolutely within its container */
+            top: 50%; /* Move the top edge of the image to the vertical center */
+            left: 50%; /* Move the left edge of the image to the horizontal center */
+            transform: translate(-50%, -50%); /* Adjust the image to truly center it */
+            max-width: 80%; /* Limit the image width to avoid overflow on smaller screens */
+            max-height: 80%; /* Limit the image height to avoid overflow */
+            border: none; /* Removes any default or applied border */
+            outline: none; /* Removes outline that might appear on focus/click */
+            box-shadow: none;
+            opacity: 0.8;
+        }
+    </style>
+</head>
+<body>
+    <div class="background-container">
+        <img src="custom-image.jpeg" alt="A Custom Image" class="centered-image"> <!-- Replace with your custom image URL -->
+    </div>
+</body>
+</html>
